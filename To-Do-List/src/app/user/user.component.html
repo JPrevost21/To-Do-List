@@ -1,3 +1,14 @@
-<p>
-  user works!
-</p>
+<div class="container">
+  <form id="addToDo" (submit)='addItem(item)'>
+    <div>
+      <label for='item'>Add Item</label>
+      <input type="text" #item>
+    </div>
+  </form>
+  <ul>
+    <li [ngStyle]="{ 'text-decoration' : item.isComplete ? 'line-through' : 'none' }" *ngFor="let item of items; let i = index"><button (click)="deleteItem(item)">X</button>
+      {{i + 1}}: {{item.prompt}}
+      <button class="myBtn" (click)="lineThroughItem(item)">Done</button> 
+    </li>
+  </ul>
+</div>
