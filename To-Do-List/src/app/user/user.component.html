@@ -1,9 +1,9 @@
 <div class="container">
   <form id="addToDo" (submit)='addItem(item)'>
-    <div>
-      <label for='item'>Add Item</label>
-      <input type="text" #item>
-    </div>
+     <div class="form-group">
+      <label class="control-label" for='item'></label>
+      <input class="form-control" id="focusedInput" type="text" #item value="Add Item">
+    </div> 
   </form>
   <ul>
     <li [ngStyle]="{ 'text-decoration' : item.isComplete ? 'line-through' : 'none' }" *ngFor="let item of items; let i = index"><button (click)="deleteItem(item)">X</button>
