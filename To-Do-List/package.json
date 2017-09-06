@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "deploy": "ng build --prod --base-href \"https://jprevost21.github.io/To-Do-List/\" && angular-cli-ghpages",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
